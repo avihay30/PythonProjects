@@ -1,0 +1,310 @@
+['[<div class="product_attr"><div class="ProdName_Value"><h4 class="PropName">כללי:\r\n               </h4><div class="PropValue"><span>שם ספק:</span>', 
+'טעמן</div></div></div><div class="ProdName_Value"><h4 class="PropName">אריזה:\r\n               </h4><div class="PropValue"><span>תכולה:</span>', 
+'220</div></div><div class="PropValue"><span>מידת תכולה:</span>', 
+'גרם</div></div><div class="PropValue"><span>מחיר ליחידת מידה:</span>', 
+'1.59</div></div></div><div class="ProdName_Value"><h4 class="PropName">נתונים לחיפוש:\r\n               </h4><div class="PropValue"><span>שם פריט:</span>', 
+'פרוסות דקל רמי לוי 220 גרם</div></div><div class="PropValue"><span>מחלקה:</span>', 
+'שימורים בישול ואפיה</div></div><div class="PropValue"><span>מחיר:</span>', 
+'3.5</div></div><div class="PropValue"><span>שם ספק/ יצרן:</span>', 
+' </div></div><div class="PropValue"><span>חיפוש מוצרים רק במבצע:</span>', 
+'כן</div></div></div><div class="ProdName_Value"><h4 class="PropName">נתונים מורחבים:\r\n               </h4><div class="PropValue"><span>ברקוד:</span>', 
+'7290015834469</div></div><div class="PropValue"><span>מותג:</span>', 
+'100</div></div><div class="PropValue"><span>שם מותג:</span>', 
+'רמי לוי</div></div></div></div>]']
+
+
+[<h4 class="PropName">כללי:
+               </h4>, <h4 class="PropName">אריזה:
+               </h4>, <h4 class="PropName">נתונים לחיפוש:
+               </h4>, <h4 class="PropName">נתונים מורחבים:
+               </h4>]
+
+
+[<h4 class="PropName">כשרויות:</h4>, <h4 class="PropName">אריזה:
+               </h4>, <h4 class="PropName">ערכים תזונתיים<span> 
+                         סימון תזונתי
+                         ל100 גרם
+                       </span>:
+               </h4>, <h4 class="PropName">נתונים לחיפוש:
+               </h4>, <h4 class="PropName">נתונים מורחבים:
+               </h4>]
+
+
+['[<div class="product_attr"><div class="ProdName_Value block"><h4 class="PropName">כשרויות',
+ '</h4><div class="PropValue"><span>כשרות',
+ '</span>בד"ץ</div></div><div class="ProdName_Value"><h4 class="PropName">אריזה',
+ '\r\n               </h4><div class="PropValue"><span>תכולה',
+ '</span><div>500</div></div><div class="PropValue"><span>מידת תכולה',
+ '</span><div>גרם</div></div><div class="PropValue"><span>מחיר ליחידת מידה',
+ '</span><div>2.98</div></div></div><div class="ProdName_Value"><h4 class="PropName">ערכים תזונתיים<span> \r\n                         סימון תזונתי\r\n                         ל100 גרם\r\n                       </span>',
+ '\r\n               </h4><div class="PropValue"><span>אנרגיה',
+ '</span><div>366</div></div><div class="PropValue"><span>פחמימות',
+ '</span><div>85.10</div></div><div class="PropValue"><span>חלבונים',
+ '</span><div>5.90</div></div><div class="PropValue"><span>שומנים',
+ '</span><div>0.20</div></div></div><div class="ProdName_Value"><h4 class="PropName">נתונים לחיפוש',
+ '\r\n               </h4><div class="PropValue"><span>שם פריט',
+ '</span><div>שוגי פיצי 500 גר\' בד"צ</div></div><div class="PropValue"><span>מחלקה',
+ '</span><div>קטניות ודגנים</div></div><div class="PropValue"><span>מחיר',
+ '</span><div>14.9</div></div><div class="PropValue"><span>שם ספק/ יצרן',
+ '</span><div>יוניליוור ישראל מזון בעמ                          </div></div><div class="PropValue"><span>כשרות',
+ '</span><div>בד"ץ</div></div><div class="PropValue"><span>חיפוש מוצרים רק במבצע',
+ '</span><div>לא</div></div></div><div class="ProdName_Value"><h4 class="PropName">נתונים מורחבים',
+ '\r\n               </h4><div class="PropValue"><span>ברקוד',
+ '</span><div>7290107647748</div></div><div class="PropValue"><span>רכיבים',
+ '</span><div>דגנים (83%) (קמח אורז, קמח חיטה (מכיל גלוטן), תמצית לתת שעורה (מכיל גלוטן)), סוכר, מלח, חומר תפיחה (סודיום ביקרבונט)</div></div><div class="PropValue"><span>כתובת יצרן',
+ '</span><div>רחוב התעשייה 12, ערד</div></div><div class="PropValue"><span>אלרגנים',
+ '</span><div>6810,גלוטן חיטה;6811,גלוטן שעורה</div></div><div class="PropValue"><span>עלול להכיל אלרגנים',
+ '</span><div>6802,אגוזי לוז;6805,אגוזי פקאן;6821,סויה;6840,שקדים</div></div><div class="PropValue"><span>פקוח לחם',
+ '</span><div>71075,ערד</div></div><div class="PropValue"><span>כשרויות',
+ '</span><div>67085,בדצ העדה החרדית;67168,כשר למהדרין בהשגחת הרב יוסף אל</div></div><div class="PropValue"><span>ערכים תזונתיים',
+ '</span><div>שומנים (גרם) - ל-30 גרם', ' 0.2;שומנים (גרם) - ל-100 גרם', ' 0.7;סיבים תזונתיים (גרם) - ל-30 גרם', ' 1;נתרן (מג) - ל-30 גרם', ' 104;אנרגיה (קלוריות) - ל-30 גרם', ' 113;סוכרים מתוך פחמימות (גרם) - ל-100 גרם', ' 19.5;חלבונים (גרם) - ל-30 גרם', ' 2.5;סך הפחמימות (גרם) - ל-3</div></div><div class="PropValue"><span>מידע דיאטטי',
+ '</span><div>5513,ללא צבעי מאכל;5527,ללא תוספת חומר משמר</div></div><div class="PropValue"><span>מותג',
+ '</span><div>3424</div></div><div class="PropValue"><span>שם מותג',
+ '</span><div>פיצי</div></div></div></div>]']
+
+
+
+
+###################################
+<div class="product_attr">
+ <div class="ProdName_Value block">
+  <h4 class="PropName">
+   כשרויות:
+  </h4>
+  <div class="PropValue">
+   <span>
+    כשרות:
+   </span>
+   בד"ץ
+  </div>
+ </div>
+ <div class="ProdName_Value">
+  <h4 class="PropName">
+   אריזה:
+  </h4>
+  <div class="PropValue">
+   <span>
+    תכולה:
+   </span>
+   <div>
+    500
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    מידת 
+תכולה:
+   </span>
+   <div>
+    גרם
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    מחיר ליחידת מידה:
+   </span>
+   <div>
+    2.98
+   </div>
+  </div>
+ </div>
+ <div class="ProdName_Value">
+  <h4 class="PropName">
+   ערכים תזונתיים
+   <span>
+    סימון תזונתי ל100 גרם
+   </span>
+   :
+  </h4>
+  <div class="PropValue">
+   <span>
+    אנרגיה:
+   </span>
+   <div>
+    366
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    פחמימות:
+   </span>
+   <div>
+    85.10
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    חלבונים:
+   </span>
+   <div>
+    5.90
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    שומנים:
+   </span>
+   <div>
+    0.20
+   </div>
+  </div>
+ </div>
+ <div class="ProdName_Value">
+  <h4 class="PropName">
+   נתונים לחיפוש:
+  </h4>
+  <div class="PropValue">
+   <span>
+    שם פריט:
+   </span>
+   <div>
+    שוגי פיצי 500 גר' 
+בד"צ
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    מחלקה:
+   </span>
+   <div>
+    קטניות ודגנים
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    מחיר:
+   </span>
+   <div>
+    14.9
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    שם ספק/ 
+יצרן:
+   </span>
+   <div>
+    יוניליוור ישראל מזון בעמ
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    כשרות:
+   </span>
+   <div>
+    בד"ץ
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    חיפוש מוצרים רק 
+במבצע:
+   </span>
+   <div>
+    לא
+   </div>
+  </div>
+ </div>
+ <div class="ProdName_Value">
+  <h4 class="PropName">
+   נתונים מורחבים:
+  </h4>
+  <div class="PropValue">
+   <span>
+    ברקוד:
+   </span>
+   <div>
+    7290107647748
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    רכיבים:
+   </span>
+   <div>
+    דגנים (83%) (קמח אורז, קמח חיטה (מכיל גלוטן), תמצית לתת שעורה (מכיל 
+גלוטן)), סוכר, מלח, חומר תפיחה (סודיום ביקרבונט)
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    כתובת יצרן:
+   </span>
+   <div>
+    רחוב 
+התעשייה 12, ערד
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    אלרגנים:
+   </span>
+   <div>
+    6810,גלוטן חיטה;6811,
+גלוטן שעורה
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    עלול להכיל אלרגנים:
+   </span>
+   <div>
+    6802,אגוזי לוז;6805,
+אגוזי פקאן;6821,סויה;6840,שקדים
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    פקוח לחם:
+   </span>
+   <div>
+    71075,
+ערד
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    כשרויות:
+   </span>
+   <div>
+    67085,בדצ העדה החרדית;67168,כשר למהדרין בהשגחת הרב 
+יוסף אל
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    ערכים תזונתיים:
+   </span>
+   <div>
+    שומנים (גרם) - ל-30 גרם: 0.2;שומנים (גרם) 
+- ל-100 גרם: 0.7;סיבים תזונתיים (גרם) - ל-30 גרם: 1;נתרן (מג) - ל-30 גרם: 104;אנרגיה (קלוריות) - ל-30 גרם: 113;סוכרים 
+מתוך פחמימות (גרם) - ל-100 גרם: 19.5;חלבונים (גרם) - ל-30 גרם: 2.5;סך הפחמימות (גרם) - ל-3
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    מידע דיאטטי:
+   </span>
+   <div>
+    5513,ללא צבעי מאכל;5527,ללא תוספת חומר משמר
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    מותג:
+   </span>
+   <div>
+    3424
+   </div>
+  </div>
+  <div class="PropValue">
+   <span>
+    שם 
+מותג:
+   </span>
+   <div>
+    פיצי
+   </div>
+  </div>
+ </div>
+</div>

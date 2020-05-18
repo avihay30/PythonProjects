@@ -1,0 +1,34 @@
+https://www.rami-levy.co.il/default.asp
+?isjson=true&
+catid={54068330-CA32-4F3C-A825-A6865EE59327}&
+
+details_type=1&
+itemid={966CE656-28C8-47E1-B5D2-899439808FDE}&
+
+7290015834469 מק"ט
+
+_=1578518865304
+
+
+https://www.rami-levy.co.il/default.asp
+?isjson=true&
+
+*** (אפשר ליצור מערך) <- סוג האוכל ***
+catid={4E2A9E59-B4DF-4165-9F75-7F2A5A407275}&
+
+**** ערך קבוע ****
+details_type=1&
+
+
+itemid={F6240884-3A76-4166-8DF8-E5A2C3283962}&
+
+7290102392254 מק"ט
+
+**** לא חשוב ****
+_=1578518642901
+
+
+
+
+https://www.rami-levy.co.il/default.asp?isjson=true&catid={54068330-CA32-4F3C-A825-A6865EE59327}&details_type=1&itemid={966CE656-28C8-47E1-B5D2-899439808FDE}&_=1578518865304
+https://www.rami-levy.co.il/default.asp?isjson=true&catid={54068330-CA32-4F3C-A825-A6865EE59327}&details_type=1&{966CE656-28C8-47E1-B5D2-899439808FDE}

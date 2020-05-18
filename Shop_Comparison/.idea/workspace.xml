@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d5ba6b0-2c1f-40b6-82a1-6bdccd7bfd18" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/bench_objectify.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/bench_objectify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/bench_xpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/bench_xpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/bench_xslt.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/bench_xslt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/benchbase.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/benchbase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/buildlibxml.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/buildlibxml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/mkhtml.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/mkhtml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/mklatex.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/mklatex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atom.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atomgen.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atomgen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/setupinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/setupinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/cssselect.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/cssselect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/doctestcompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/doctestcompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/ElementSoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/ElementSoup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/_diffcommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/_diffcommand.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/_html5builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/_html5builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/clean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/diff.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/diff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/formfill.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/formfill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/html5parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/soupparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/soupparser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_autolink.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_autolink.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_clean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_diff.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_diff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_elementsoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_elementsoup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_feedparser_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_feedparser_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_formfill.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_formfill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_frames.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_frames.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_html5parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_rewritelinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_rewritelinks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_xhtml.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_xhtml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/transform_feedparser_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/transform_feedparser_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/pyclasslookup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/pyclasslookup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/sax.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/sax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsContent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsContent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsDefault.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsDefault.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsPushdown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsPushdown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/out_inNsContent_c14nQnameXpathElem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/out_inNsContent_c14nQnameXpathElem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/common_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/common_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/selftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/selftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_classlookup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_classlookup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_doctestcompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_doctestcompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_dtd.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_dtd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_elementpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_elementpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_etree.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_etree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_htmlparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_htmlparser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_http_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_http_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_incremental_xmlfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_incremental_xmlfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_isoschematron.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_isoschematron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_nsclasses.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_nsclasses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_objectify.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_objectify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_pyclasslookup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_pyclasslookup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_sax.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_sax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_threading.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_threading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_unicode.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_unicode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xpathevaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xpathevaluator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xslt.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xslt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/tools/xpathgrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/tools/xpathgrep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/update-error-constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/update-error-constants.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Setup Script" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/lxml" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="shop_comparison" pattern="file[Shop_Comparison]:*" />
+  </component>
+  <component name="ProjectId" id="1VYtf1todIvrhLSeBM1si0oNUIa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.Shop_helpers">
+    <configuration name="Shop_helpers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Shop_Comparison" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shop_helpers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="all_shops" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Shop_Comparison" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/all_shops.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gui-test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Shop_Comparison" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui-test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Shop_Comparison" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rami_levi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Shop_Comparison" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rami_levi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="request_updating" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Shop_Comparison" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Yad2_Automation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Yad2_Automation/request_updating.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Shop_helpers" />
+      <item itemvalue="Python.all_shops" />
+      <item itemvalue="Python.gui-test" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.rami_levi (1)" />
+      <item itemvalue="Python.request_updating" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Shop_helpers" />
+        <item itemvalue="Python.gui-test" />
+        <item itemvalue="Python.rami_levi (1)" />
+        <item itemvalue="Python.all_shops" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d5ba6b0-2c1f-40b6-82a1-6bdccd7bfd18" name="Default Changelist" comment="" />
+      <created>1577441955150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577441955150</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="198" key="#Inspections" timestamp="1581288373277">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="198" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1581288373277" />
+    <state x="0" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577917795489">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577917795489" />
+    <state x="210" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578005147026">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="210" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578005147026" />
+    <state x="1028" y="430" key="FileChooserDialogImpl" timestamp="1581691473304">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1028" y="430" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1581691473304" />
+    <state width="936" height="291" key="GridCell.Tab.0.bottom" timestamp="1581797104082">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1581797104082" />
+    <state width="936" height="291" key="GridCell.Tab.0.center" timestamp="1581797104082">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="291" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1581797104082" />
+    <state width="936" height="291" key="GridCell.Tab.0.left" timestamp="1581797104082">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="291" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1581797104082" />
+    <state width="936" height="291" key="GridCell.Tab.0.right" timestamp="1581797104082">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="291" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1581797104082" />
+    <state width="1899" height="427" key="GridCell.Tab.1.bottom" timestamp="1581684295973">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="427" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1581684295973" />
+    <state width="1899" height="427" key="GridCell.Tab.1.center" timestamp="1581684295973">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="427" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1581684295973" />
+    <state width="1899" height="427" key="GridCell.Tab.1.left" timestamp="1581684295973">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="427" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1581684295973" />
+    <state width="1899" height="427" key="GridCell.Tab.1.right" timestamp="1581684295973">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="427" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1581684295973" />
+    <state x="0" y="187" key="SettingsEditor" timestamp="1581291136962">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="187" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1581291136962" />
+    <state width="343" height="543" key="XDebugger.FullValuePopup" timestamp="1579043109806">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="343" height="543" key="XDebugger.FullValuePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1579043109806" />
+    <state x="-7" y="0" width="974" height="1080" key="com.intellij.ide.util.TipDialog" timestamp="1582276344186">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-7" y="0" width="974" height="1080" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582276344186" />
+    <state x="278" y="206" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581068888852">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="278" y="206" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1581068888852" />
+    <state x="58" y="277" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581197320887">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="58" y="277" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1581197320887" />
+    <state x="197" y="190" width="737" height="606" key="find.popup" timestamp="1581795074175">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="197" y="190" width="737" height="606" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1581795074175" />
+    <state x="158" y="152" key="scopes" timestamp="1581794556907">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="158" y="152" key="scopes/0.0.1920.1080@0.0.1920.1080" timestamp="1581794556907" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579039068946">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579039068946" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>177</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>244</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>251</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/url_parsing.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>266</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>264</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/url_parsing.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>305</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Shop_helpers.py</url>
+          <line>120</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
