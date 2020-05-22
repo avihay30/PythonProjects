@@ -1,3 +1,6 @@
+from constants import EMPTY_ITEM_DATA
+
+
 class Json:
 
     def __init__(self, json_data, product_number):
@@ -6,18 +9,15 @@ class Json:
                 if product_number == item['ItemCode']:
                     self.item_data = item
                     break
+                else:
+                    self.item_data = EMPTY_ITEM_DATA
         except KeyError:
             for item in json_data['Root']['Items']['Item']:
                 if product_number == item['ItemCode']:
                     self.item_data = item
                     break
-            else:
-                self.item_data = {'PriceUpdateDate': '', 'ItemCode': '', 'ItemType': '',
-                                  'ItemName': 'מוצר לא נמצא', 'ManufacturerName': '',
-                                  'ManufactureCountry': '', 'ManufacturerItemDescription': '',
-                                  'UnitQty': '', 'Quantity': '', 'bIsWeighted': '',
-                                  'UnitOfMeasure': '', 'QtyInPackage': '', 'ItemPrice': '',
-                                  'UnitOfMeasurePrice': '', 'AllowDiscount': '', 'ItemStatus': ''}
+                else:
+                    self.item_data = EMPTY_ITEM_DATA
 
     @property
     def get_price(self):

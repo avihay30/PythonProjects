@@ -8,5 +8,5 @@ setup(
     license='',
     author='avihay',
     author_email='',
-    description='', install_requires=['selenium', 'beautifulsoup4', 'tqdm']
+    description='', install_requires=['selenium', 'tqdm']
 )

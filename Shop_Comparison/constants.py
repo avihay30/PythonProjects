@@ -39,3 +39,10 @@ VICTORY_STORE_NUM = 1
 SHUFERSAL_STORE_NUM = 1
 RAMILEVI_STORE_NUM = "001"
 YBITAN_STORE_NUM = 1
+
+EMPTY_ITEM_DATA = {'PriceUpdateDate': '', 'ItemCode': '', 'ItemType': '',
+                                      'ItemName': 'מוצר לא נמצא', 'ManufacturerName': '',
+                                      'ManufactureCountry': '', 'ManufacturerItemDescription': '',
+                                      'UnitQty': '', 'Quantity': '', 'bIsWeighted': '',
+                                      'UnitOfMeasure': '', 'QtyInPackage': '', 'ItemPrice': '',
+                                      'UnitOfMeasurePrice': '', 'AllowDiscount': '', 'ItemStatus': ''}

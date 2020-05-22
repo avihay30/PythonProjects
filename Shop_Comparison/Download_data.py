@@ -1,51 +1,45 @@
-import collections
-import glob
-import gzip
-import os
+from time import sleep
 import pathlib
 import shutil
+import glob
+import gzip
+import json
+import os
 import re
 
-import xml2json
-import xmltodict
-import pprint
-import json
-
-from time import sleep
-
-from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+import xmltodict
 
-from constants import datetime_for_ybitan, DATE_STAMP, RAMILEVI_DATA_BASE_URL, RAMILEVI_USERNAME, \
+from constants import DATE_STAMP, RAMILEVI_DATA_BASE_URL, RAMILEVI_USERNAME, \
     SHUFERSAL_DATA_BASE_URL, VICTORY_DATA_BASE_URL
-from data_from_json import Json
 
 
 def _delete_file(file_location):
     os.remove(file_location)
 
 
-def _xml_to_json(store_num):  # accessing one file at a time
-    xml_file = ''.join(glob.glob("Download/xml/*.xml"))
+def _xml_to_json(store_num, store_name):  # accessing one file at a time
+    xml_file = ''.join(glob.glob(f"Download/{store_name}/xml/*.xml"))
     with open(xml_file, encoding='utf-8') as fd:
         data_dict = xmltodict.parse(fd.read())
 
     json_data = json.dumps(data_dict, ensure_ascii=False).encode("utf-8")
-    json_file_location = f'Download/xml/{DATE_STAMP}store_number-{store_num}.json'
+    json_file_location = f'Download/{store_name}/xml/{DATE_STAMP}store_number-{store_num}_{store_name}.json'
     with open(json_file_location, 'w') as json_file:
         json_file.write(json_data.decode())
 
     return json_file_location
 
 
-def _gz_to_json(store_num):  # accessing one file at a time
-    gz_file_location = ''.join(glob.glob("Download/*.gz"))
-    xml_file_location = f'Download/xml/{DATE_STAMP}store_number-{store_num}.xml'
+def _gz_to_json(store_num, store_name):  # accessing one file at a time
+    gz_file_location = ''.join(glob.glob(f"Download/{store_name}/*.gz"))
+    xml_file_location = f'Download/{store_name}/xml/{DATE_STAMP}store_number-{store_num}_{store_name}.xml'
     with gzip.open(gz_file_location, 'rb') as gz_file_location:
         with open(xml_file_location, 'wb') as xml_file:
             shutil.copyfileobj(gz_file_location, xml_file)
 
-    json_file_name = _xml_to_json(store_num)
+    json_file_name = _xml_to_json(store_num, store_name)
 
     _delete_file(gz_file_location.filename)
     _delete_file(xml_file_location)
@@ -54,9 +48,10 @@ def _gz_to_json(store_num):  # accessing one file at a time
 
 
 class StoreDataBase(object):
-    def __init__(self, url, store_number):
+    def __init__(self, url, store_number, store_name):
         self.store_number = store_number
         self.url = url
+        self.store_name = store_name
 
     def _shufersal_downloader(self, driver):
         category_drawer = driver.find_element_by_id('ddlCategory')
@@ -88,20 +83,21 @@ class StoreDataBase(object):
         download.click()
         return
 
-    def _victory_downloader(self, driver):
-        user_name = driver.find_element_by_id('username')
-        user_name.send_keys(RAMILEVI_USERNAME)
-        sign_in = driver.find_element_by_id('login-button')
-        sign_in.click()
-        return
+    # def _victory_downloader(self, driver):
+    #     user_name = driver.find_element_by_id('username')
+    #     user_name.send_keys(RAMILEVI_USERNAME)
+    #     sign_in = driver.find_element_by_id('login-button')
+    #     sign_in.click()
+    #     return
 
     def download_prices(self):
         chrome_options = Options()
         # chrome_options.add_argument("--headless")
         chrome_options.add_argument('--ignore-ssl-errors=yes')
         chrome_options.add_argument('--ignore-certificate-errors')
-        prefs = {"download.default_directory": f"{pathlib.Path().absolute()}\Download"}
+        prefs = {"download.default_directory": f"{pathlib.Path().absolute()}\Download\{self.store_name}"}
         chrome_options.add_experimental_option("prefs", prefs)
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
         driver.set_page_load_timeout(15)
         driver.get(self.url)
@@ -112,14 +108,14 @@ class StoreDataBase(object):
         elif self.url == SHUFERSAL_DATA_BASE_URL:
             self._shufersal_downloader(driver)
 
-        elif self.url == VICTORY_DATA_BASE_URL:
-            self._victory_downloader(driver)
+        # elif self.url == VICTORY_DATA_BASE_URL:
+        #     self._victory_downloader(driver)
 
         # "is_downloaded?"
-        while not glob.glob("Download/*.gz"):
+        while not glob.glob(f"Download/{self.store_name}/*.gz"):
             sleep(0.1)
         driver.close()
 
-        json_file_location = _gz_to_json(self.store_number)
+        json_file_location = _gz_to_json(self.store_number, self.store_name)
 
         return json_file_location
