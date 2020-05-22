@@ -1,9 +1,11 @@
 import csv
+import json
+import os
 import re
 import shutil
 from time import sleep
 from urllib.error import URLError
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 from bs4 import *
 from selenium import webdriver
@@ -12,7 +14,9 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from tqdm import tqdm
 
+from Download_data import _delete_file
 from constants import *
+from data_from_json import Json
 
 """ checking if network if alive """
 
@@ -26,198 +30,283 @@ def connect(host='http://google.com'):
             print('No Internet!!\n trying again..')
             sleep(10)
     else:
+        print('We tried 3 times --> there was not connection to the internet')
         return False
 
 
-""" extraction of the id of a product by it's name """
+""" /** legacy code """
+#
+# """ extraction of the id of a product by it's name """
+#
+#
+# def getting_product_id_for_victory(product_name):
+#     chrome_options = Options()
+#     chrome_options.add_argument("--headless")
+#     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#     driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+#     driver.set_page_load_timeout(15)
+#     try:
+#         driver.get('https://www.victoryonline.co.il/מבצעים_מומלצים/מדף')
+#         search = driver.find_element_by_id('txtfind')
+#         search.click()
+#         search.send_keys(product_name)
+#         driver.find_element_by_class_name('MagnifyIcon').click()
+#         sleep(2)
+#         try:
+#             id = driver.find_element_by_css_selector("li.NgMspProductCell.MSM.Expanded")
+#             id = id.get_attribute('productid')
+#         except NoSuchElementException:
+#             id = ''
+#     except TimeoutException:
+#         print("Timeout!!!, retrying...\nPlease try to reconnect to the internet and run again.")
+#         sleep(5)
+#         driver.quit()
+#         id = '_'
+#     return id
+#
+#
+# # getting_product_id_for_victory('מגבונים לחים בבישום עדין טיטולים')
+#
+# """ extraction of the uuid of a product by it's id->(מק"ט)  """
+#
+#
+# def getting_uuid_and_cat_by_product_id_for_rami_levi(id):
+#     chrome_options = Options()
+#     chrome_options.add_argument("--headless")
+#     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#     driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+#     driver.set_page_load_timeout(15)
+#     try:
+#         driver.get('https://www.rami-levy.co.il/')
+#         search = driver.find_element_by_id('strSearch')
+#         try:
+#             search.click()
+#         except ElementClickInterceptedException:
+#             driver.execute_script('arguments[0].click();', search)
+#         # sleep(2)
+#         search.send_keys(id)
+#         driver.find_element_by_class_name('search_but').click()
+#         """ getting the uuid """
+#         sleep(2)
+#         try:
+#             uuid = driver.find_element_by_css_selector("div.image_icons_zone")
+#             uuid = uuid.get_attribute('id')
+#             """ getting the cat-id """
+#             cat_id_holder = driver.find_element_by_xpath('//*[@id="tblSearchCategories"]/ul/li/a').get_attribute('href')
+#             cat_id = cat_id_holder.split('=')[3]
+#         except NoSuchElementException:
+#             cat_id = ''
+#             uuid = ''
+#
+#     except TimeoutException:
+#         print("Timeout, retrying...\nPlease try to reconnect to the internet and run again.")
+#         driver.quit()
+#         cat_id = '_'
+#         uuid = '_'
+#
+#     return cat_id, uuid
+#
+#
+# """ extraction of the price of a product by parsing the html """
+#
+#
+# def getting_victory_price(html_page):
+#     # html_page = urlopen('http://www.victoryonline.co.il/Ajax/FetchUserControl.aspx?UserControl=Popup_NgProductDetails&ProductID=3679')
+#     chrome_options = Options()
+#     # chrome_options.add_argument("--headless")
+#     chrome_options.add_argument("start-maximized")
+#     chrome_options.add_argument("disable-infobars")
+#     chrome_options.add_argument("--disable-extensions")
+#
+#     driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+#     driver.get(html_page)
+#     sleep(15)
+#     soup = BeautifulSoup(driver.page_source, "html.parser")
+#     print("this is sodasdasd " + str(driver.page_source))
+#     # soup = BeautifulSoup(html_page, "html.parser")
+#     try:
+#         price_content = soup.find('span', {"class": "Offer"})
+#
+#
+#         print(soup)
+#         # print(price_content)
+#
+#
+#         price = price_content.text.strip()[1:]
+#     except AttributeError:
+#         price_content = soup.find('span', {"class": "Price"})
+#         price = price_content.text.strip()[1:]
+#     try:
+#         price_per_item_content = soup.find('span', {"class": "AfterOffer"})
+#         price_per_item = ''.join(re.findall(r"[-+]?\d*\.\d+|\d+", price_per_item_content.text.strip()))
+#     except AttributeError:
+#         try:
+#             price_per_item_content = soup.find('span', {"class": "BeforeOffer"})
+#             price_per_item = ''.join(re.findall(r"[-+]?\d*\.\d+|\d+", price_per_item_content.text.strip()))
+#         except AttributeError:
+#             price_per_item = '/'
+#             product_name = ''
+#             brand_name = ''
+#     """ checking if the value is below zero('אג) """
+#     if price_per_item != '/':
+#         list_price_per_item_content = list(price_per_item_content.text)
+#         reversed_list = list_price_per_item_content[::-1]
+#         for k, v in enumerate(list_price_per_item_content):
+#             if v == "א" and list_price_per_item_content[k + 1] == "ג":
+#                 if reversed_list[-2] == '.':
+#                     price_per_item = '0.0' + str(''.join(price_per_item)).replace('.', '')
+#                 elif reversed_list[-3] == '.':
+#                     price_per_item = '0.' + str(''.join(price_per_item)).replace('.', '')
+#                 else:
+#                     price_per_item = '0.' + str(''.join(price_per_item))
+#
+#         product_name_content = soup.find('span', {"class": "PrefixWrp"})
+#         product_name = product_name_content.text.strip()
+#         brand_name_content = soup.find('span', {"id": "Brand"})
+#         brand_name = brand_name_content.text.strip()
+#     return price, price_per_item, product_name, brand_name
+#
+# """ extraction of the id of a product by it's name """
+#
+#
+# def getting_product_id_for_my_supermarket(product_name):
+#     chrome_options = Options()
+#     # chrome_options.add_argument("--headless")
+#     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#     driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+#     driver.set_page_load_timeout(15)
+#     try:
+#         driver.get('https://www.mysupermarket.co.il/עכשיו_בזול/מדף')
+#         search = driver.find_element_by_id('txtfind')
+#         search.click()
+#         search.send_keys(product_name)
+#         driver.find_element_by_class_name('MagnifyIcon').click()
+#         sleep(15)
+#         sleep(2)
+#         try:
+#             id = driver.find_element_by_css_selector("li.NgMspProductCell.MSM.Expanded")
+#             id = id.get_attribute('productid')
+#         except NoSuchElementException:
+#             id = ''
+#     except TimeoutException:
+#         print("Timeout!!!, retrying...\nPlease try to reconnect to the internet and run again.")
+#         sleep(5)
+#         driver.quit()
+#         id = '_'
+#     return id
+#
+#
+# # getting_product_id_for_my_supermarket('מגבונים לחים בבישום עדין טיטולים')
+#
+# def getting_my_supermarket_price(html_page):
+#     chrome_options = Options()
+#     # chrome_options.add_argument("--headless")
+#     # chrome_options.add_argument("start-maximized")
+#     # chrome_options.add_argument("disable-infobars")
+#     # chrome_options.add_argument("--disable-extensions")
+#     # driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+#     # driver.get(html_page)
+#     # soup = BeautifulSoup(driver.page_source, "html.parser")
+#     soup = BeautifulSoup(urlopen(html_page), "html.parser")
+#     # print(soup)
+#
+#     price = 0
+#     price_per_item = 0
+#     product_name = ""
+#     brand_name = ""
+#
+#     # price_content = soup.find('ul', {"class": "NgMspPriceComparison"})
+#     # print(price_content)
+#     # price = price_content.text.strip()[1:]
+#
+#     # product_name_content = soup.find('span', {"class": "PrefixWrp"})
+#     # product_name = product_name_content.text.strip()
+#     # brand_name_content = soup.find('span', {"id": "Brand"})
+#     # brand_name = brand_name_content.text.strip()
+#     pass
+#     # return product_name, brand_name
+#
+# # getting_my_supermarket_price('http://www.mysupermarket.co.il/Ajax/FetchUserControl.aspx?UserControl=Popup_NgProductDetails&ProductID=71909')
+# getting_my_supermarket_price('https://www.mysupermarket.co.il/Ajax/FetchUserControl.aspx?UserControl=Popup_NgProductDetails&ProductID=92960')
+#
+#
+# def getting_rami_levi_price(html_page):
+#     # html_page = urlopen('https://www.rami-levy.co.il/default.asp?isjson=true&catid={7787895C-FF87-4283-A2E8-A9876CCD3E36}&details_type=1&itemid={BBB7501B-B656-45E4-A8DE-C1767AB1E253}')
+#     price = 0
+#     price_per_item = 0
+#     product_name = ""
+#     brand_name = ""
+#     soup = BeautifulSoup(html_page, "html.parser")
+#     print(soup)
+#
+#     price_content = soup.find('div', {"class": "product_attr"})
+#     extra_soup = BeautifulSoup(str(price_content), "html.parser").prettify()
+#     extra_soup = BeautifulSoup(extra_soup, 'html.parser')
+#     extra_soup = extra_soup.find({"div"})
+#
+#     # generating a list of the HTML page
+#     man_content = str(extra_soup).split("\n")
+#
+#     # list iteration
+#     for i in range(0, len(man_content)):
+#         man_value = man_content[i].strip()
+#         if man_value == "שם ספק:":
+#             brand_name = man_content[i + 3].strip()
+#         try:
+#             price_per_item_content = soup.find('div', {'class': 'prodNotes'})
+#             price_per_item = price_per_item_content.text.strip().replace('(', "").replace(')', "").strip()
+#         except AttributeError:
+#             if man_value == "מחיר ליחידת מידה:":
+#                 price_per_item = man_content[i + 3].strip()
+#         if man_value == "שם פריט:":
+#             product_name = man_content[i + 3].strip()
+#         if man_value == "מחיר:":
+#             price = man_content[i + 3].strip()
+#         if man_value == "שם ספק/ יצרן:":
+#             brand_name = man_content[i + 3].strip()
+#         if man_value == "שם מותג:":
+#             brand_name = man_content[i + 3].strip()
+#             break
+#     # else:
+#     # print("\nthere was a problem with the extraction of the price!)
+#     if brand_name == '</div>' or brand_name == '<div>':
+#         brand_name = ''
+#     return price, price_per_item, product_name, brand_name
+#
+#
+# # getting_rami_levi_price('_')
+#
+# def getting_shufersal_price(html_page):
+#     # html_page = urlopen('https://www.shufersal.co.il/online/he/p/P_63140/json?cartContext%5BopenFrom%5D=SEARCH&cartContext%5BrecommendationType%5D=PRODUCT')
+#     soup = BeautifulSoup(html_page, "html.parser")
+#     # print(soup)
+#     price_content = soup.find('span', {"itemprop": "price"})
+#     # print(price_content)
+#     price = price_content.text.strip()[:-1]
+#     price_per_item_content = soup.find('div', {"class": "smallText"})
+#     price_per_item = price_per_item_content.text.strip()
+#     product_name_content = soup.find('h3', {"class": "title"})
+#     product_name = product_name_content.text.strip()
+#     try:
+#         brand_name_content = soup.find('div', {"class": "text tooltip-js"})
+#         """ AttributeError: 'NoneType' object has no attribute 'text'(shufelsal(https://www.shufersal.co.il/online/he/p/P_7296073345299/json?cartContext%5BopenFrom%5D=SEARCH&cartContext%5BrecommendationType%5D=PRODUCT) """
+#         brand_name = brand_name_content.text.strip()
+#     except AttributeError:
+#         brand_name_content = soup.find('div', {"itemprop": "description"})
+#         """ there is an option here to get a size of the products(units) """
+#         brand_name = brand_name_content.text.strip().split('\n')[-1].strip()
+#     except Exception:
+#         brand_name = ''
+#     return price, price_per_item, product_name, brand_name
+#
+#
+# # getting_shufersal_price("_")
+
+""" legacy code */ """
 
 
-def getting_product_id_for_victory(product_name):
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome('C:\Develpment\PycharmProjects\chromedriver.exe', chrome_options=chrome_options)
-    driver.set_page_load_timeout(15)
-    try:
-        driver.get('https://www.victoryonline.co.il/מבצעים_מומלצים/מדף')
-        search = driver.find_element_by_id('txtfind')
-        search.click()
-        search.send_keys(product_name)
-        driver.find_element_by_class_name('MagnifyIcon').click()
-        sleep(2)
-        try:
-            id = driver.find_element_by_css_selector("li.NgMspProductCell.MSM.Expanded")
-            id = id.get_attribute('productid')
-        except NoSuchElementException:
-            id = ''
-    except TimeoutException:
-        print("Timeout!!!, retrying...\nPlease try to reconnect to the internet and run again.")
-        sleep(5)
-        driver.quit()
-        id = '_'
-    return id
-
-
-# getting_product_id_for_victory('מגבונים לחים בבישום עדין טיטולים')
-
-""" extraction of the uuid of a product by it's id->(מק"ט)  """
-
-
-def getting_uuid_and_cat_by_product_id_for_rami_levi(id):
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome('C:\Develpment\PycharmProjects\chromedriver.exe', chrome_options=chrome_options)
-    driver.set_page_load_timeout(15)
-    try:
-        driver.get('https://www.rami-levy.co.il/')
-        search = driver.find_element_by_id('strSearch')
-        try:
-            search.click()
-        except ElementClickInterceptedException:
-            driver.execute_script('arguments[0].click();', search)
-        # sleep(2)
-        search.send_keys(id)
-        driver.find_element_by_class_name('search_but').click()
-        """ getting the uuid """
-        sleep(2)
-        try:
-            uuid = driver.find_element_by_css_selector("div.image_icons_zone")
-            uuid = uuid.get_attribute('id')
-            """ getting the cat-id """
-            cat_id_holder = driver.find_element_by_xpath('//*[@id="tblSearchCategories"]/ul/li/a').get_attribute('href')
-            cat_id = cat_id_holder.split('=')[3]
-        except NoSuchElementException:
-            cat_id = ''
-            uuid = ''
-
-    except TimeoutException:
-        print("Timeout, retrying...\nPlease try to reconnect to the internet and run again.")
-        driver.quit()
-        cat_id = '_'
-        uuid = '_'
-
-    return cat_id, uuid
-
-
-""" extraction of the price of a product by parsing the html """
-
-
-def getting_victory_price(html_page):
-    # html_page = urlopen('http://www.victoryonline.co.il/Ajax/FetchUserControl.aspx?UserControl=Popup_NgProductDetails&ProductID=3679')
-    soup = BeautifulSoup(html_page, "html.parser")
-    try:
-        price_content = soup.find('span', {"class": "Offer"})
-        price = price_content.text.strip()[1:]
-    except AttributeError:
-        price_content = soup.find('span', {"class": "Price"})
-        price = price_content.text.strip()[1:]
-    try:
-        price_per_item_content = soup.find('span', {"class": "AfterOffer"})
-        price_per_item = ''.join(re.findall(r"[-+]?\d*\.\d+|\d+", price_per_item_content.text.strip()))
-    except AttributeError:
-        try:
-            price_per_item_content = soup.find('span', {"class": "BeforeOffer"})
-            price_per_item = ''.join(re.findall(r"[-+]?\d*\.\d+|\d+", price_per_item_content.text.strip()))
-        except AttributeError:
-            price_per_item = '/'
-            product_name = ''
-            brand_name = ''
-    """ checking if the value is below zero('אג) """
-    if price_per_item != '/':
-        list_price_per_item_content = list(price_per_item_content.text)
-        reversed_list = list_price_per_item_content[::-1]
-        for k, v in enumerate(list_price_per_item_content):
-            if v == "א" and list_price_per_item_content[k + 1] == "ג":
-                if reversed_list[-2] == '.':
-                    price_per_item = '0.0' + str(''.join(price_per_item)).replace('.', '')
-                elif reversed_list[-3] == '.':
-                    price_per_item = '0.' + str(''.join(price_per_item)).replace('.', '')
-                else:
-                    price_per_item = '0.' + str(''.join(price_per_item))
-
-        product_name_content = soup.find('span', {"class": "PrefixWrp"})
-        product_name = product_name_content.text.strip()
-        brand_name_content = soup.find('span', {"id": "Brand"})
-        brand_name = brand_name_content.text.strip()
-    return price, price_per_item, product_name, brand_name
-
-
-# getting_victory_price("_")
-
-
-def getting_rami_levi_price(html_page):
-    # html_page = urlopen('https://www.rami-levy.co.il/default.asp?isjson=true&catid={7787895C-FF87-4283-A2E8-A9876CCD3E36}&details_type=1&itemid={BBB7501B-B656-45E4-A8DE-C1767AB1E253}')
-    price = 0
-    price_per_item = 0
-    product_name = ""
-    brand_name = ""
-    soup = BeautifulSoup(html_page, "html.parser")
-
-    price_content = soup.find('div', {"class": "product_attr"})
-    extra_soup = BeautifulSoup(str(price_content), "html.parser").prettify()
-    extra_soup = BeautifulSoup(extra_soup, 'html.parser')
-    extra_soup = extra_soup.find({"div"})
-
-    # generating a list of the HTML page
-    man_content = str(extra_soup).split("\n")
-
-    # list iteration
-    for i in range(0, len(man_content)):
-        man_value = man_content[i].strip()
-        if man_value == "שם ספק:":
-            brand_name = man_content[i + 3].strip()
-        try:
-            price_per_item_content = soup.find('div', {'class': 'prodNotes'})
-            price_per_item = price_per_item_content.text.strip().replace('(', "").replace(')', "").strip()
-        except AttributeError:
-            if man_value == "מחיר ליחידת מידה:":
-                price_per_item = man_content[i + 3].strip()
-        if man_value == "שם פריט:":
-            product_name = man_content[i + 3].strip()
-        if man_value == "מחיר:":
-            price = man_content[i + 3].strip()
-        if man_value == "שם ספק/ יצרן:":
-            brand_name = man_content[i + 3].strip()
-        if man_value == "שם מותג:":
-            brand_name = man_content[i + 3].strip()
-            break
-    # else:
-    # print("\nthere was a problem with the extraction of the price!)
-    if brand_name == '</div>' or brand_name == '<div>':
-        brand_name = ''
-    return price, price_per_item, product_name, brand_name
-
-
-# getting_rami_levi_price('_')
-
-def getting_shufersal_price(html_page):
-    # html_page = urlopen('https://www.shufersal.co.il/online/he/p/P_63140/json?cartContext%5BopenFrom%5D=SEARCH&cartContext%5BrecommendationType%5D=PRODUCT')
-    soup = BeautifulSoup(html_page, "html.parser")
-    price_content = soup.find('div', {"itemprop": "price"})
-    price = price_content.text.strip()[:-1]
-    price_per_item_content = soup.find('div', {"class": "smallText"})
-    price_per_item = price_per_item_content.text.strip()
-    product_name_content = soup.find('h3', {"class": "title"})
-    product_name = product_name_content.text.strip()
-    try:
-        brand_name_content = soup.find('div', {"class": "text tooltip-js"})
-        """ AttributeError: 'NoneType' object has no attribute 'text'(shufelsal(https://www.shufersal.co.il/online/he/p/P_7296073345299/json?cartContext%5BopenFrom%5D=SEARCH&cartContext%5BrecommendationType%5D=PRODUCT) """
-        brand_name = brand_name_content.text.strip()
-    except AttributeError:
-        brand_name_content = soup.find('div', {"itemprop": "description"})
-        """ there is an option here to get a size of the products(units) """
-        brand_name = brand_name_content.text.strip().split('\n')[-1].strip()
-    except Exception:
-        brand_name = ''
-    return price, price_per_item, product_name, brand_name
-
-
-# getting_shufersal_price("_")
-
-def importing_data_to_xl(path_of_src_xl_file, ShopUrl, price_func, shop_name, path_of_output_xl_file):
+def importing_data_to_xl(path_of_src_xl_file, json_file_location, shop_name, path_of_output_xl_file):
     if not connect():
-        print('We tried 3 times --> there was not connection to the internet')
         exit()
     with open(path_of_src_xl_file, "r", encoding='utf-8') as source_file:
         source_sheet = csv.reader(source_file)
@@ -238,47 +327,75 @@ def importing_data_to_xl(path_of_src_xl_file, ShopUrl, price_func, shop_name, pa
                     # name_by_website = row[COL_PRODUCT_NAME_FROM_WEBSITE]
                     # brand_name = row[COL_BRAND]
 
-                    date = datetime.datetime.now().strftime("%d/%m/%Y")
-                    if shop_name == 'Victory':
-                        html_page = ShopUrl(name)
-                    else:
-                        html_page = ShopUrl(tag)
+                    # date = datetime.datetime.now().strftime("%d/%m/%Y")
 
-                    if html_page == '':
-                        price = ''
-                        price_per_unit = ''
-                        name_by_website = NO_PRODUCT_ERROR
-                        brand_name = ''
-                    elif html_page == '_':
-                        price = ''
-                        price_per_unit = ''
-                        name_by_website = NO_INTERNET_ERROR
-                        brand_name = ''
-                    else:
-                        try:
-                            page = urlopen(html_page)
-                        except URLError:
-                            print("There was no internet while downloading the product... Please try again at stable connection!\n Link: " + html_page)
-                            name_by_website = NO_INTERNET_ERROR
-                            continue
-
-                        price, price_per_unit, name_by_website, brand_name = price_func(page)
+                    """ /** legacy code """
+                    # if shop_name == 'Victory':
+                    #     html_page = ShopUrl(name)
+                    # else:
+                    #     html_page = ShopUrl(tag)
+                    #
+                    # if html_page == '':
+                    #     price = ''
+                    #     price_per_unit = ''
+                    #     name_by_website = NO_PRODUCT_ERROR
+                    #     brand_name = ''
+                    # elif html_page == '_':
+                    #     price = ''
+                    #     price_per_unit = ''
+                    #     name_by_website = NO_INTERNET_ERROR
+                    #     brand_name = ''
+                    # else:
+                    #     try:
+                    #         if shop_name == 'Victory':
+                    #             # req = Request(html_page, headers={'User-Agent': 'Mozilla/5.0'})
+                    #             # page = urlopen(req).read()
+                    #             page = html_page
+                    #             # print(page)
+                    #         else:
+                    #             # print(html_page)
+                    #             page = urlopen(html_page)
+                    #     except URLError:
+                    #         print(
+                    #             "There was no internet while downloading the product... Please try again at stable connection!\n Link: " + html_page)
+                    #         name_by_website = NO_INTERNET_ERROR
+                    #         continue
+                    #
+                    #
+                    # price, price_per_unit, name_by_website, brand_name = price_func(page)
+                    """ legacy code */ """
 
                     sale_price = row[COL_SALE_PRICE]
                     sale_price_per_unit = row[COL_SALE_PRICE_PER_UNIT]
 
-                    # print(name_by_website + ": " + price + "\n")
-                    # tqdm.write(name_by_website + ": " + price + "\n")
-                    if price_per_unit == '/':
-                        price = ''
-                        price_per_unit = ''
-                        name_by_website = NOT_AVAILABLE_PRODUCT
-                        brand_name = ''
+                # # print(name_by_website + ": " + price + "\n")
+                # # tqdm.write(name_by_website + ": " + price + "\n")
+                # if price_per_unit == '/':
+                #     price = ''
+                #     price_per_unit = ''
+                #     name_by_website = NOT_AVAILABLE_PRODUCT
+                #     brand_name = ''
+
+                    with open(json_file_location) as json_file:
+                        data = json.load(json_file)
+
+                    print(tag)
+                    product_number = tag
+                    product_data = Json(data, product_number)
+
+                    name_by_website = product_data.get_name_of_product
+                    brand_name = product_data.get_manufacturer_name
+                    date = product_data.get_price_update_date
+                    price = product_data.get_price
+                    price_per_unit = product_data.get_item_price_per_unit
+                    # sale_price = 0
+                    # sale_price_per_unit = 0
 
                     writer.writerow(
                         [tracking_num, tracking_num_by_competitors, name, tag, name_by_website, brand_name, date, price,
                          price_per_unit, sale_price, sale_price_per_unit])
 
+    _delete_file(json_file_location)
     shutil.copy2(path_of_output_xl_file, 'out-files\Backup\B_' + shop_name + '-' + DATE_STAMP + '.csv')
     return True
 

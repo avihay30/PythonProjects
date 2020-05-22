@@ -8,7 +8,7 @@ def victory_double_process():
     p1 = Process(target=victory_main)
     p1.start()
     p2 = Process(
-        target=get_progress_percent("source-files\Victory-src-csv.csv", 'out-files\Victory-out-csv.csv',
+        target=get_progress_percent("source-files\MySupermarket-src-csv.csv", 'out-files\MySupermarket-out-csv.csv',
                                     hebrew_shop_name="Victory"))
     p2.start()
 
