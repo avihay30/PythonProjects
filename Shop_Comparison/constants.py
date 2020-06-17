@@ -36,8 +36,8 @@ RAMILEVI_USERNAME = 'RamiLevi'
 YBITAN_DATA_BASE_URL = f'http://publishprice.ybitan.co.il/{datetime_for_ybitan}/'
 
 VICTORY_STORE_NUM = 1
-SHUFERSAL_STORE_NUM = 1
-RAMILEVI_STORE_NUM = "001"
+SHUFERSAL_STORE_NUM = 123
+RAMILEVI_STORE_NUM = "050"
 YBITAN_STORE_NUM = 1
 
 EMPTY_ITEM_DATA = {'PriceUpdateDate': '', 'ItemCode': '', 'ItemType': '',
