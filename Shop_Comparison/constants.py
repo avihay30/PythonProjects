@@ -2,6 +2,7 @@ import datetime
 from random import randint
 
 DATE_STAMP = datetime.datetime.now().strftime("%d_%m_%Y(%H-%M)")
+datetime_for_ybitan = datetime.datetime.now().strftime("%Y%m%d")
 # TIME_STAMP = datetime.datetime.now().strftime("%H:%M:%S")
 
 """ xl Column num """
@@ -27,3 +28,21 @@ NO_INTERNET_ERROR = 'לא היה אינטרנט בזמן הוצאת המוצר, 
 NOT_AVAILABLE_PRODUCT = 'מוצר לא זמין באתר, כנראה נגמר המלאי'
 
 PATH_OF_BACKUP_FILE = '\out-files\Backup\B_'
+
+VICTORY_DATA_BASE_URL = 'http://matrixcatalog.co.il/NBCompetitionRegulations.aspx'
+SHUFERSAL_DATA_BASE_URL = 'http://prices.shufersal.co.il/'
+RAMILEVI_DATA_BASE_URL = 'https://url.retail.publishedprices.co.il/login'
+RAMILEVI_USERNAME = 'RamiLevi'
+YBITAN_DATA_BASE_URL = f'http://publishprice.ybitan.co.il/{datetime_for_ybitan}/'
+
+VICTORY_STORE_NUM = 1
+SHUFERSAL_STORE_NUM = 123
+RAMILEVI_STORE_NUM = "050"
+YBITAN_STORE_NUM = 1
+
+EMPTY_ITEM_DATA = {'PriceUpdateDate': '', 'ItemCode': '', 'ItemType': '',
+                                      'ItemName': 'מוצר לא נמצא', 'ManufacturerName': '',
+                                      'ManufactureCountry': '', 'ManufacturerItemDescription': '',
+                                      'UnitQty': '', 'Quantity': '', 'bIsWeighted': '',
+                                      'UnitOfMeasure': '', 'QtyInPackage': '', 'ItemPrice': '',
+                                      'UnitOfMeasurePrice': '', 'AllowDiscount': '', 'ItemStatus': ''}

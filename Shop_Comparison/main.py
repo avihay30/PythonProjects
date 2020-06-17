@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import subprocess
 import tkinter as tk
 
@@ -16,7 +18,6 @@ def run_shufersal_script():
 
 def run_all_shops_script():
     subprocess.call('start /wait python all_shops.py', shell=True)
-
 
 
 HEIGHT = 500
