@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d5ba6b0-2c1f-40b6-82a1-6bdccd7bfd18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/Simester_Classes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simester_Classes/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/pythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/classSelect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/urls.text" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Download_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Download_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-files/RamiLevi-out-csv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out-files/RamiLevi-out-csv.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-files/Sufersal-out-csv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out-files/Sufersal-out-csv.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +49,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Simester_Classes" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Python.shufersal">
     <configuration name="Download_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -169,9 +183,9 @@
     </configuration>
     <list>
       <item itemvalue="Python.request_updating" />
+      <item itemvalue="Python.Download_data" />
       <item itemvalue="Python.Download_prices" />
       <item itemvalue="Python.base_end_functions" />
-      <item itemvalue="Python.Download_data" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.shufersal" />
     </list>
@@ -185,6 +199,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -211,42 +226,24 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="839" height="220" key="GridCell.Tab.0.bottom" timestamp="1592408980909">
+    <state x="1512" y="361" key="#Plugins" timestamp="1602622248230">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="839" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980909" />
-    <state width="839" height="220" key="GridCell.Tab.0.center" timestamp="1592408980909">
+    <state x="1512" y="361" key="#Plugins/0.0.2560.1440/-1080.0.1080.1920@0.0.2560.1440" timestamp="1602622248230" />
+    <state x="1600" y="456" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602618852698">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="839" height="220" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980909" />
-    <state width="839" height="220" key="GridCell.Tab.0.left" timestamp="1592408980909">
+    <state x="1600" y="456" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1440/-1080.0.1080.1920@0.0.2560.1440" timestamp="1602618852698" />
+    <state x="1600" y="456" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596997920442" />
+    <state x="896" y="366" key="FileChooserDialogImpl" timestamp="1602963533406">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="839" height="220" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980909" />
-    <state width="839" height="220" key="GridCell.Tab.0.right" timestamp="1592408980909">
+    <state x="896" y="366" key="FileChooserDialogImpl/0.0.2560.1440/-1080.0.1080.1920@0.0.2560.1440" timestamp="1602963533406" />
+    <state x="1700" y="475" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1596190362650" />
+    <state x="1421" y="365" key="SettingsEditor" timestamp="1596190376755">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="839" height="220" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980909" />
-    <state width="668" height="328" key="GridCell.Tab.1.bottom" timestamp="1592408980903">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="668" height="328" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980903" />
-    <state width="668" height="328" key="GridCell.Tab.1.center" timestamp="1592408980903">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="668" height="328" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980903" />
-    <state width="668" height="328" key="GridCell.Tab.1.left" timestamp="1592408980903">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="668" height="328" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980903" />
-    <state width="668" height="328" key="GridCell.Tab.1.right" timestamp="1592408980903">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="668" height="328" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1592408980903" />
-    <state width="647" height="720" key="XDebugger.FullValuePopup" timestamp="1592408561188">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="647" height="720" key="XDebugger.FullValuePopup/0.0.2560.1440@0.0.2560.1440" timestamp="1592408561188" />
+    <state x="1421" y="365" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596190376755" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
