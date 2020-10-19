@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d5ba6b0-2c1f-40b6-82a1-6bdccd7bfd18" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/Simester_Classes.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Simester_Classes/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
@@ -21,6 +22,82 @@
       <change afterPath="$PROJECT_DIR$/../pythonProject/main.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pythonProject/urls.text" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/bench_objectify.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/bench_objectify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/bench_xpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/bench_xpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/bench_xslt.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/bench_xslt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/benchmark/benchbase.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/benchmark/benchbase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/buildlibxml.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/buildlibxml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/mkhtml.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/mkhtml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/mklatex.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/mklatex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atom.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atomgen.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/doc/s5/ep2008/atomgen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/setupinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/setupinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/cssselect.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/cssselect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/doctestcompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/doctestcompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/ElementSoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/ElementSoup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/_diffcommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/_diffcommand.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/_html5builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/_html5builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/clean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/diff.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/diff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/formfill.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/formfill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/html5parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/soupparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/soupparser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_autolink.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_autolink.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_clean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_diff.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_diff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_elementsoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_elementsoup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_feedparser_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_feedparser_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_formfill.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_formfill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_frames.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_frames.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_html5parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_rewritelinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_rewritelinks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_xhtml.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/test_xhtml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/html/tests/transform_feedparser_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/html/tests/transform_feedparser_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/pyclasslookup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/pyclasslookup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/sax.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/sax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsContent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsContent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsDefault.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsDefault.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsPushdown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/inNsPushdown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/out_inNsContent_c14nQnameXpathElem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/c14n-20/out_inNsContent_c14nQnameXpathElem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/common_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/common_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/selftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/selftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_classlookup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_classlookup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_doctestcompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_doctestcompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_dtd.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_dtd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_elementpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_elementpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_etree.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_etree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_htmlparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_htmlparser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_http_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_http_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_incremental_xmlfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_incremental_xmlfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_isoschematron.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_isoschematron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_nsclasses.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_nsclasses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_objectify.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_objectify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_pyclasslookup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_pyclasslookup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_sax.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_sax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_threading.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_threading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_unicode.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_unicode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xpathevaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xpathevaluator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xslt.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/src/lxml/tests/test_xslt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/tools/xpathgrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/tools/xpathgrep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lxml/update-error-constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/lxml/update-error-constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,11 +260,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.request_updating" />
+<<<<<<< Updated upstream
       <item itemvalue="Python.Download_data" />
       <item itemvalue="Python.Download_prices" />
       <item itemvalue="Python.base_end_functions" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.shufersal" />
+=======
+      <item itemvalue="Python.Shop_helpers" />
+      <item itemvalue="Python.all_shops" />
+      <item itemvalue="Python.gui-test" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.rami_levi (1)" />
+>>>>>>> Stashed changes
     </list>
     <recent_temporary>
       <list>
@@ -199,7 +284,10 @@
       </list>
     </recent_temporary>
   </component>
+<<<<<<< Updated upstream
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+=======
+>>>>>>> Stashed changes
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -226,6 +314,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< Updated upstream
     <state x="1512" y="361" key="#Plugins" timestamp="1602622248230">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -244,6 +333,12 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1421" y="365" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1596190376755" />
+=======
+    <state x="461" y="185" key="SettingsEditor" timestamp="1594624904772">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1594624904772" />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
