@@ -7,7 +7,7 @@ import math
 # getting a positive integer number from the user.
 number = input("Insert number: ")
 # calculating the number of digits in that number.
-digits = int(math.log10(int(number)))+1
+digits = int(math.log10(int(number))) + 1
 
 # printing "OK" if there is only 1 digit.
 if digits == 1:
@@ -22,26 +22,23 @@ elif digits == 2:
     else:
         print("ERROR")
 
-# we used else here for readability,
-# it's not really necessary because if we put that "for" below
-# above the first "if" it would work the same
+# if digits > 2.
 else:
-    # running over all the digits in the number
+    # running over all the digits in the number,
     # and checking each group of three digit separately.
     # we used "range(digits - 2)" because it's the last iteration we need to check.
     for i in range(digits - 2):
-        # saving the remainders of each digit in a variable.
+        # declaring the remainders of each digit in a variable.
         first_digit_remainder = int(number[i]) % 3
-        second_digit_remainder = int(number[i+1]) % 3
-        third_digit_remainder = int(number[i+2]) % 3
+        second_digit_remainder = int(number[i + 1]) % 3
+        third_digit_remainder = int(number[i + 2]) % 3
         # checking if all the three digits have different remainders.
         if (first_digit_remainder != second_digit_remainder) and \
                 (first_digit_remainder != third_digit_remainder) and \
                 (second_digit_remainder != third_digit_remainder):
             # if true - skipping to the next iteration.
             continue
-        # we used else here for readability, because we put "continue" in the above line,
-        # we don't really need that "else", if the above "if" is true it will skip over it anyway.
+        # if there are some digit with the same remainder.
         else:
             # printing "ERROR" if 2 or more digits have the same remainder.
             print("ERROR")

@@ -10,7 +10,6 @@ lineA_slope = (lineA_y0 - lineA_y1) / (lineA_x0 - lineA_x1)
 lineB_slope = (lineB_y0 - lineB_y1) / (lineB_x0 - lineB_x1)
 
 # checking if the lines are parallel lines.
-# todo: check if they are the same line
 if lineA_slope == lineB_slope:
     print("The is no intersection between the two lines.\n"
           "try inserting different coordinates, goodbye!")
