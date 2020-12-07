@@ -65,8 +65,8 @@ original_array = []
 for i in range(number):
     # every iterating getting an input
     # from the user about a element to add to the empty list.
-    original_array.append(int(input("Enter element %s: " % (i + 1))))
+    original_array.append(int(input("Enter element %s: " % i)))
 
 # printing both lists, original and shifted.
-print("Original array: \n%s" % original_array)
-print("Shifted array: \n%s" % left_circular_shift(original_array))
+print("\nOriginal array: \n%s" % original_array)
+print("\nShifted array: \n%s" % left_circular_shift(original_array))
