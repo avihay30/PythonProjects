@@ -6,22 +6,22 @@
 import random
 
 
-def longest_subarray(player_list, size_of_list):
-    """ Function longest_subarray gets a list of numbers and the size of that list.
+def longestSubarray(a, n):
+    """ Function longestSubarray gets a list of numbers and the size of that list.
         and returns the size of longest ascending arithmetic sequence in that list.
     """
     # declaring "counters_list" that will contains all the sizes of the
-    # ascending arithmetic sequence in the "player_list".
+    # ascending arithmetic sequence in the "a".
     counters_list = []
     # declaring "counter" with the value 1, that represent the size of
     # ascending arithmetic sequence while running the loop.
     counter = 1
     # running in a loop until before last element in the list
     # (because we are checking if the element[i] is smaller than the next element).
-    for i in range(size_of_list - 1):
+    for i in range(n - 1):
         # checking if the pair of elements(element[i], element[i+1])
         # are making an ascending arithmetic sequence.
-        if player_list[i] < player_list[i + 1]:
+        if a[i] < a[i + 1]:
             # if so, incrementing the counter by 1.
             counter += 1
         # if the pair are not in ascending order, or equal.
@@ -50,14 +50,14 @@ def generate_list(ticket_size):
     return list
 
 
-def print_ticket_array(list, size_of_list):
-    """ Function print_ticket_array gets a list,
+def print_ticketArray(a, n):
+    """ Function print_ticketArray gets a list,
         and prints all the elements of the list in the same line
     """
     # running a loop of all the elements of the list.
-    for number in list:
+    for i in range(n):
         # in each iteration printing each element with space afterwards.
-        print(number, end=" ")
+        print(a[i], end=" ")
 
 
 def play(number_of_players):
@@ -80,12 +80,12 @@ def play(number_of_players):
         # printing the introduction of the ticket list(i + 1 for not calling first player -> 0).
         print("player", i + 1, "ticket: ", end="")
         # printing the ticket list.
-        print_ticket_array(all_players_list[i], list_size)
+        print_ticketArray(all_players_list[i], list_size)
         # printing an empty line for separating a player from next player.
         print()
         # in each iterating calling the function "longest_subarray" for each player and
         # appending the returned value the "list_of_longest_subarray".
-        list_of_longest_subarray.append(longest_subarray(all_players_list[i], list_size))
+        list_of_longest_subarray.append(longestSubarray(all_players_list[i], list_size))
 
     # declaring a "winner_number" for readability in the next print.
     # the variable gets the first index that equal to maximum value in the "list_of_longest_subarray",
