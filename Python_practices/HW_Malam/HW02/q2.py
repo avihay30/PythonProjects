@@ -1,22 +1,31 @@
-def deleting_leftest_number(number):
-    """ Function deleting_leftest_number gets a number
-        and return a string of that number without the leftest digit.
+import math
+
+
+def deleting_leftest_number(number, num_of_digits):
+    """ Function deleting_leftest_number gets a number and his number
+        of digits and returns a number without the leftest digit.
     """
-    return str(number)[1:]
+    # creating the divider for deleting the leftest digit.
+    module_divider = 10 ** (num_of_digits - 1)
+    return number % module_divider
 
 
-def get_leftest_digit(number):
+def get_leftest_digit(number, num_of_digits):
     """ Function get_leftest_digit gets a number
-        and return the leftest digit of that number.
+        and returns the leftest digit of that number.
     """
-    return int(str(number)[0])
+    # creating the divider for getting the leftest digit.
+    divider = 10 ** (num_of_digits - 1)
+    return number // divider
 
 
 def concatenate_unit_digit_to_number(number, digit):
     """ Function concatenate_unit_digit_to_number gets a number and a digit
-        and return a the number with the digit in its units.
+        and returns a the number with the digit in its units.
     """
-    return int(str(number) + str(digit))
+    # multiplying the number by 10 for creating a "black space"
+    # to add the units.
+    return number * 10 + digit
 
 
 def left_circular_shift(list):
@@ -30,22 +39,24 @@ def left_circular_shift(list):
     leftest_of_first_element = 0
     # running in a loop length of "list" times.
     for i in range(len(list)):
+        # calculating the number of digits of a number every iteration.
+        number_of_digits = int(math.log10(list[i]) + 1)
         # calculating and saving in a variable the leftest digit of the list[i].
-        leftest_digit = get_leftest_digit(list[i])
+        leftest_digit = get_leftest_digit(list[i], number_of_digits)
         # if its the first iteration.
         if i == 0:
             # saving the leftest digit of the first number for later on.
             leftest_of_first_element = leftest_digit
         else:
             # changing the element in place of i - 1
-            # in the list to be 
+            # in the list to be
             # shifted(leftest of list[i] to be digits of list[i-1]),
             # by calling the function "concatenate_unit_digit_to_number".
             shifted_list[i - 1] = concatenate_unit_digit_to_number(
                 shifted_list[i - 1], leftest_digit)
-        # deleting the leftest digit in the number list[i] 
+        # deleting the leftest digit in the number list[i]
         # in order to complete the left circular shift of that cell in the list.
-        shifted_element = deleting_leftest_number(list[i])
+        shifted_element = deleting_leftest_number(list[i], number_of_digits)
         # appending to the list the complete shifted element.
         shifted_list.append(shifted_element)
     # dealing with the first cell that needs to add
