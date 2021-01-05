@@ -42,7 +42,7 @@ def is_mat_ok(matrix):
         "is_row_equal" and "is_diagonal_positive" functions.
     """
     # running on each row of matrix.
-    for i in range(1, len(matrix)):
+    for i in range(len(matrix)):
         if not is_row_equal(matrix, i):
             return False
 
