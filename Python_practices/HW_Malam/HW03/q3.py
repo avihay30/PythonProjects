@@ -28,12 +28,12 @@ def strRestored(string):
     index = 0
     # running loop len(string) times.
     while index < len(string):
-        if string[index].isalpha():
+        if "A" <= string[index] <= "Z" or "a" <= string[index] <= "z":
             # declaring "alpha" that holds the char.
             alpha = string[index]
             # running loop until the string[i] is letter.
             for i in range(index + 1, len(string)):
-                if string[i].isalpha():
+                if "A" <= string[i] <= "Z" or "a" <= string[i] <= "z":
                     # changing index to skip the unwonted
                     # iterations in the while loop.
                     index = i - 1

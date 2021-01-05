@@ -3,7 +3,7 @@ def has_leading_zeros(number):
         and returns if the number has_leading_zeros
         (expect zero as one digit).
     """
-    return len(number) > 1 and number.startswith("0")
+    return len(number) > 1 and number[0] == "0"
 
 
 def is_legal_ip(string):
