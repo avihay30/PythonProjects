@@ -1,97 +1,116 @@
-def check_square(matrix, r, c):
-    square_list = [matrix[r - 1][c - 1],
-                   matrix[r - 1][c],
-                   matrix[r - 1][c + 1],
-                   matrix[r][c - 1],
-                   matrix[r][c + 1],
-                   matrix[r + 1][c - 1],
-                   matrix[r + 1][c],
-                   matrix[r + 1][c + 1]]
-    return square_list if matrix[r][c] > max(square_list) else False
+def get_max_size_of_row(matrix):
+    """ Function get_max_size_of_row gets a matrix and
+        and returns the size of the longest row in the matrix.
+    """
+    max_len_of_row = len(matrix[0])
+    for row in matrix:
+        if len(row) > max_len_of_row:
+            max_len_of_row = len(row)
+    return max_len_of_row
 
 
-def create_edge_neighbors(matrix):
-    edge_mat = [[matrix[0][1], matrix[1][0], matrix[1][1]],
-                [matrix[0][-2], matrix[1][-2], matrix[1][-1]],
-                [matrix[-2][0], matrix[-2][1], matrix[-1][1]],
-                [matrix[-2][-2], matrix[-2][-1], matrix[-1][-2]]]
-    return edge_mat
+def warp_perimeter_of_matrix(matrix, wrapper):
+    """ Function warp_perimeter_of_matrix get an matrix and a wrapper
+        and return a square wrapped-matrix with that wrapper.
+    """
+    max_size_of_row = get_max_size_of_row(matrix)
+    # creating a new matrix and the first row that contains the wrapper.
+    # "max_size_of_row + 2" because first and last col will also contain the wrapper.
+    wrapped_matrix = [[wrapper] * (max_size_of_row + 2)]
+    for i in range(len(matrix)):
+        # adding new row that has the wrapper in the beginning.
+        wrapped_matrix.append([wrapper])
+        for element in matrix[i]:
+            # adding each element in "matrix" to the "wrapped_matrix".
+            # i + 1 because the first row in the wrapped_matrix is list of wrappers.
+            wrapped_matrix[i + 1].append(element)
+        # adding the wrapper in the end of the row,
+        # in case of non square matrix we fill the empty space in wrappers
+        # in order to get an square matrix.
+        for j in range(max_size_of_row - len(matrix[i]) + 1):
+            wrapped_matrix[i + 1].append(wrapper)
+
+    # adds the last row of the matrix that contains a list of wrappers.
+    wrapped_matrix.append([wrapper] * (max_size_of_row + 2))
+    return wrapped_matrix
 
 
-def get_edge_number(i, j):
-    # upper left edge
-    edge_number = 0
-    if i == j:
-        # lower right edge
-        if not i == 0:
-            edge_number = 3
-    else:
-        # upper right edge
-        if i == 0:
-            edge_number = 1
-        # lower left edge
-        else:
-            edge_number = 2
-    return edge_number
+def remove_non_real_neigh(list_of_neigh, wrapper):
+    """ Function remove_non_real_neigh gets a list and a wrapper,
+        and returns a list that doesn't contain the wrapper.
+    """
+    filtered_list = []
+    for element in list_of_neigh:
+        if element != wrapper:
+            filtered_list.append(element)
+    return filtered_list
 
 
-def check_middles_frame(mat, i, j):
-    if i == 0 or i == len(mat) - 1:
-        if i == 0:
-            delta = 1
-        else:
-            delta = -1
-        list_neigh = [mat[i][j - 1],
-                      mat[i][j + 1],
-                      mat[i + delta][j - 1],
-                      mat[i + delta][j],
-                      mat[i + delta][j + 1]]
-    # cols
-    else:
-        if j == 0:
-            delta = 1
-        else:
-            delta = -1
-        list_neigh = [mat[i - 1][j],
-                      mat[i + 1][j],
-                      mat[i - 1][j + delta],
-                      mat[i][j + delta],
-                      mat[i + 1][j + delta]]
-    return list_neigh
+def get_neighbors(matrix, row, col):
+    """ Function get_neighbors gets an matrix and row,col number and
+        and return a list of neighbors
+    """
+    # declaring a square_list that contains all the square of neighbors around the
+    # matrix[row][col] element(without the element itself).
+    square_list = [matrix[row - 1][col - 1],
+                   matrix[row - 1][col],
+                   matrix[row - 1][col + 1],
+                   matrix[row][col - 1],
+                   matrix[row][col + 1],
+                   matrix[row + 1][col - 1],
+                   matrix[row + 1][col],
+                   matrix[row + 1][col + 1]]
+    return square_list
+
+
+def get_str_list_with_round_brackets(list):
+    """ Function get_str_list_with_round_brackets gets a list and
+        returns a string of the list with round brackets
+    """
+    string = "("
+    for element in list:
+        string += str(element) + ", "
+    # string[:-2] for cutting off the last ", " of last element.
+    return string[:-2] + ")"
 
 
 def check_mat(matr):
+    """ Function check_mat gets an matrix, and print the
+        elements that are bigger than there neighbors, and returns there amount
+    """
+    # declare an string that will be warped around the matrix to ease the checking
+    # process of neighbors.
+    wrapper_of_mat = ""
+    wrapped_matr = warp_perimeter_of_matrix(matr, wrapper_of_mat)
+    # counts number of element that are bigger.
     counter = 0
-    edge_matrix = create_edge_neighbors(matr)
-    # iterate on rows
-    for i in range(len(matr)):
-        # iterate on cols
-        for j in range(len(matr[i])):
-            # if not first/last row.
-            # if not first/last col.
-            if (0 < i < len(matr) - 1) and (0 < j < len(matr[i]) - 1):
-                checked_list = check_square(matr, i, j)
-                if checked_list:
-                    counter += 1
-                    print("%d. matr[%d][%d]=%d > %s" % (counter, i, j, matr[i][j], checked_list))
-            # if on edges(checks for diagonal, anti-diagonal).
-            elif i == j or (len(matr[i]) - i - 1 == j):
-                edge_neig = edge_matrix[get_edge_number(i, j)]
-                is_point_big = matr[i][j] > max(edge_neig)
-                if is_point_big:
-                    counter += 1
-                    print("%d. matr[%d][%d]=%d > %s" % (counter, i, j, matr[i][j], edge_neig))
-            # on middle frame
-            else:
-                frame_nigh = check_middles_frame(matr, i, j)
-                is_big = matr[i][j] > max(frame_nigh)
-                if is_big:
-                    counter += 1
-                    print("%d. matr[%d][%d]=%d > %s" % (counter, i, j, matr[i][j], frame_nigh))
+
+    # runs on rows(without first and last row that holds the wrapper).
+    for i in range(1, len(wrapped_matr) - 1):
+        # runs on col(without first and last col that holds the wrapper).
+        for j in range(1, len(wrapped_matr[i]) - 1):
+            # checking in case it's not a square matrix
+            if wrapped_matr[i][j] == wrapper_of_mat:
+                continue
+            list_of_neigh = get_neighbors(wrapped_matr, i, j)
+            list_of_real_neigh = remove_non_real_neigh(list_of_neigh, wrapper_of_mat)
+            # checking if the element is bigger than neighbors.
+            if wrapped_matr[i][j] > max(list_of_real_neigh):
+                counter += 1
+                print("%d. matr[%d][%d]=%d > %s" % (
+                    counter,
+                    i - 1,
+                    j - 1,
+                    wrapped_matr[i][j],
+                    get_str_list_with_round_brackets(list_of_real_neigh)))
+    print()
     return counter
 
 
 def main():
+    """ Function main has an hard-codded matrix,
+        and prints numbers of element that are bigger than there neighbors.
+    """
     mat = [[2, 3, 4, 5, 6],
            [6, 5, 7, 4, 3],
            [3, 4, 9, 8, 2],
